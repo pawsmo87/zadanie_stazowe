@@ -9,6 +9,8 @@
         <input type="text" id="name" name="name" required><br>
         <label for="email">E-mail:</label><br>
         <input type="email" id="email" name="email" required><br>
+        <label for="phone">Telefon:</label><br>
+        <input type="number" id="phone" name="phone" required><br>
         <label for="password">Hasło:</label><br>
         <input type="password" id="password" name="password" required><br>
         <label for="password_confirmation">Potwierdź hasło:</label><br>

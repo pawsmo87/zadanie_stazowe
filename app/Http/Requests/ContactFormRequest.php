@@ -10,17 +10,15 @@ class ContactFormRequest extends FormRequest
     {
         return [
             'name' => 'required|string',
-            'surname' => 'required|string',
             'email' => 'required|email',
-            'phone' => 'required|string',
+            'phone' => 'required|number',
         ];
     }
 
     public function messages()
 {
     return [
-        'name.required' => 'Pole imię jest wymagane.',
-        'surname.required' => 'Pole nazwisko jest wymagane.',
+        'name.required' => 'Pole imię i Nazwisko jest wymagane.',
         'email.required' => 'Pole e-mail jest wymagane.',
         'email.email' => 'Pole e-mail musi być poprawnym adresem e-mail.',
         'phone.required' => 'Pole telefon jest wymagane.',

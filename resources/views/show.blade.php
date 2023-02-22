@@ -6,7 +6,7 @@
     <p><strong>Imię i nazwisko:</strong> {{ $user->name }}</p>
     <p><strong>E-mail:</strong> {{ $user->email }}</p>
 
-    <a href="{{ route('users.edit', $user->id) }}">Edytuj</a>
+    <a href="{{ route('user.edit', $user->id) }}">Edytuj</a>
     <form action="{{ route('users.destroy', $user->id) }}" method="POST">
         @csrf
         @method('DELETE')

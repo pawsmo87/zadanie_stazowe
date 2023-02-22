@@ -3,13 +3,13 @@
 @section('content')
     <h1>Lista użytkowników</h1>
 
-    <a href="{{ route('users.create') }}">Dodaj użytkownika</a>
+    <a href="{{ route('user.create') }}">Dodaj użytkownika</a>
 
     <ul>
     @foreach ($users as $user)
         <li>{{ $user->name }} - {{ $user->email }} 
-            <a href="{{ route('users.edit', $user->id) }}">Edytuj</a>
-            <form action="{{ route('users.destroy', $user->id) }}" method="POST">
+            <a href="{{ route('user.edit', $user->id) }}">Edytuj</a>
+            <form action="{{ route('user.destroy', $user->id) }}" method="POST">
                 @csrf
                 @method('DELETE')
                 <button type="submit">Usuń</button>
