@@ -1,6 +1,8 @@
 <?php
+
 namespace App\Http\Controllers;
 
+use App\Http\Requests\CreateUserRequest; 
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -20,11 +22,11 @@ class UserController extends Controller
     }
 
    
-    public function store(Request $request)
+    public function store(CreateUserRequest $request)
     {
         $validatedData = $request->validate([
-            'name' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:users',
+            'full_name' => 'required|string|max:5',
+            'email' => 'required|string|email|max:25|unique:users',
             'phone' => 'required|number|max:12',
             'password' => 'required|string|min:8|confirmed',
         ]);
