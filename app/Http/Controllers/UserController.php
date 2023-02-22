@@ -11,7 +11,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
+        
     }
 
     /**
@@ -19,15 +19,15 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(ContactFormRequest $request)
     {
-        //
+        
     }
 
     /**
@@ -35,7 +35,7 @@ class UserController extends Controller
      */
     public function show(string $id)
     {
-        //
+       
     }
 
     /**
@@ -61,4 +61,5 @@ class UserController extends Controller
     {
         //
     }
+
 }
