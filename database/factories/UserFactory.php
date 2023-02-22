@@ -1,6 +1,8 @@
 <?php
 
+
 namespace Database\Factories;
+$factory = app(\Illuminate\Database\Eloquent\Factory::class);
 
 use Faker\Generator as Faker;
 use App\Models\Klient;
