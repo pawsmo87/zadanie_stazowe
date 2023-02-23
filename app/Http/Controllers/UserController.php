@@ -32,6 +32,13 @@ class UserController extends Controller
         ]);
         $user = User::create($validatedData);
         return redirect()->route('show', $user->id);
+        $user = User::create($request->all());
+
+       
+        $admin = User::where('role', 'admin')->first();
+        Notification::send($admin, new NewClientNotification($user->name, $user->surname, $user->email));
+    
+        return redirect()->back();
     }
 
    
