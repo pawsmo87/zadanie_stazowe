@@ -17,4 +17,8 @@
         <input type="password" id="password_confirmation" name="password_confirmation" required><br>
         <button type="submit">Dodaj użytkownika</button>
     </form>
+
+    <div id="app">
+        <example-component></example-component>
+    </div>
 @endsection
